@@ -4,6 +4,6 @@ services:
         autoconfigure: true
         public: false
 
-    KimaiPlugin\DeductionTimeBundle\:
+    KimaiPlugin\PlaceholderTimeBundle\:
         resource: '../../*'
         exclude: '../../{Resources,.github}'

@@ -2,13 +2,13 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file source-language="en" target-language="de" datatype="plaintext" original="messages.en.xlf">
     <body>
-      <trans-unit id="zc6XdUj" resname="deduction.label">
-        <source>deduction.label</source>
-        <target>Abzugszeit</target>
+      <trans-unit id="zc5XdBj" resname="placeholder.label">
+        <source>placeholder.label</source>
+        <target>Platzhalter</target>
       </trans-unit>
-      <trans-unit id="8uh0_wt" resname="deduction.help">
-        <source>deduction.help</source>
-        <target>Jeder Zeiteintrag wird als Abzugszeit angesehen und die errechnete Dauer wird ins negative umgekehrt</target>
+      <trans-unit id="7uh0_xt" resname="placeholder.help">
+        <source>placeholder.help</source>
+        <target>Jeder Zeiteintrag wird als Platzhalter angesehen und fließt nicht in die Berechnung mit ein</target>
       </trans-unit>
     </body>
   </file>

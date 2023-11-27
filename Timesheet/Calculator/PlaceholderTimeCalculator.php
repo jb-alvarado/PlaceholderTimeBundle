@@ -1,20 +1,20 @@
 <?php
 
 /*
- * This file is part of the "DeductionTimeBundle" for Kimai.
+ * This file is part of the "PlaceholderTimeBundle" for Kimai.
  * All rights reserved by Kevin Papst (www.keleo.de).
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace KimaiPlugin\DeductionTimeBundle\Timesheet\Calculator;
+namespace KimaiPlugin\PlaceholderTimeBundle\Timesheet\Calculator;
 
 use App\Entity\Timesheet;
 use App\Timesheet\CalculatorInterface;
-use KimaiPlugin\DeductionTimeBundle\DeductionTimeBundle;
+use KimaiPlugin\PlaceholderTimeBundle\PlaceholderTimeBundle;
 
-final class DeductionTimeCalculator implements CalculatorInterface
+final class PlaceholderTimeCalculator implements CalculatorInterface
 {
     public function calculate(Timesheet $record, array $changeset): void
     {
@@ -22,14 +22,16 @@ final class DeductionTimeCalculator implements CalculatorInterface
             return;
         }
 
-        $meta = $record->getActivity()->getMetaField(DeductionTimeBundle::META_FIELD_DEDUCTION)?->getValue();
+        $meta = $record->getActivity()->getMetaField(PlaceholderTimeBundle::META_FIELD_PLACEHOLDER)?->getValue();
 
         if ($meta === true || $meta === '1') {
             $duration = $record->getDuration(false);
             if ($duration > 0) {
-                $record->setDuration($duration * -1);
+                $record->setDuration(0);
             }
         }
+
+        return;
     }
 
     public function getPriority(): int

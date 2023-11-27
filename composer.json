@@ -1,9 +1,9 @@
 {
-    "name": "keleo/deduction-time-bundle",
-    "description": "Configure certain activities as deduction time, resulting in negative durations for timesheets.",
-    "homepage": "https://www.kimai.org/store/keleo-deduction-time-bundle.html",
+    "name": "keleo/placeholder-time-bundle",
+    "description": "Configure certain activities as a placeholder time. Should only serve as information for the user, e.g. for completed overtime.",
+    "homepage": "https://www.kimai.org/store/keleo-placeholder-time-bundle.html",
     "type": "kimai-plugin",
-    "version": "2.0.1",
+    "version": "2.0.0",
     "keywords": [
         "kimai",
         "kimai-plugin"
@@ -18,12 +18,12 @@
     "extra": {
         "kimai": {
             "require": 20000,
-            "name": "Deduction times"
+            "name": "Placeholder times"
         }
     },
     "autoload": {
         "psr-4": {
-            "KimaiPlugin\\DeductionTimeBundle\\": ""
+            "KimaiPlugin\\PlaceholderTimeBundle\\": ""
         }
     },
     "config": {
